@@ -5,7 +5,6 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="google-site-verification" content="eHgT90Kx1G3GBq2xg-WC4rrBwale51jHqP4dxNuAbpc" />
 
   <title>Legacy of Dragonholt</title>
 
@@ -13,27 +12,23 @@
   <!-- Javascript -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
-  <script type="text/javascript">
-    var xmlhttp = new XMLHttpRequest();
-    var response;
-    var newEntry;
-
-    xmlhttp.onreadystatechange = function() {
-        if (this.readyState == 4 && this.status == 200) {
-            response = JSON.parse(this.responseText);
-            var newEntry = "0000";
-            setValues(newEntry)
-        }
-    };
-    xmlhttp.open("GET", "lod.json", true);
-    xmlhttp.send();
-  </script>
-  <script src="js/lod.js"></script>
+  <script src="assets/lod.js"></script>
+  <script src="assets/lod_data.js"></script>
 
   <!-- Styles-->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
   <link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet">
-  <link rel="stylesheet" href="css/lod.css">
+  <link rel="stylesheet" href="assets/lod.css">
+
+  <!-- Execution -->
+  <script>
+    $(function() {
+    var entryid = window.location.hash.slice(1).toString();
+    if(entryid){
+        MoveToEntry(entryid);
+    }else setValues("0000");
+  });
+  </script>
 </head>
 
 <body>
@@ -42,12 +37,12 @@
 <div><p id="story">Story text</p></div>
 
 <div>
-<button type="button" id="option1" onclick="selectOption(1)">Option 1</button>
-<button type="button" id="option2" onclick="selectOption(2)">Option 2</button>
-<button type="button" id="option3" onclick="selectOption(3)">Option 3</button>
-<button type="button" id="option4" onclick="selectOption(4)">Option 4</button>
-<button type="button" id="option5" onclick="selectOption(5)">Option 5</button>
-<button type="button" id="option6" onclick="selectOption(6)">Option 6</button>
+<button type="button" id="option1" onclick="selectOption(1)" class="btn btn-dark btn-lg btn-block">Option 1</button>
+<button type="button" id="option2" onclick="selectOption(2)" class="btn btn-dark btn-lg btn-block">Option 2</button>
+<button type="button" id="option3" onclick="selectOption(3)" class="btn btn-dark btn-lg btn-block">Option 3</button>
+<button type="button" id="option4" onclick="selectOption(4)" class="btn btn-dark btn-lg btn-block">Option 4</button>
+<button type="button" id="option5" onclick="selectOption(5)" class="btn btn-dark btn-lg btn-block">Option 5</button>
+<button type="button" id="option6" onclick="selectOption(6)" class="btn btn-dark btn-lg btn-block">Option 6</button>
 </div>
 
 </div>
