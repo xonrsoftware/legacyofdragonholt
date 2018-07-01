@@ -11,7 +11,7 @@ function MoveToEntry(newEntryid){
         // IE9, IE8, etc
         window.location.hash = '#!' + newEntryid;
     }
-    document.getElementById("savefield").innerHTML = "Сохранить текущую страницу: http://phenomen.xyz/lod#" + newEntryid;
+    document.getElementById("savefield").innerHTML = "Сохранить текущую страницу: https://phenomen.github.io/legacyofdragonholt/#" + newEntryid;
 }
 var currenthash;
 $(window).on('hashchange', function() {
@@ -20,7 +20,6 @@ $(window).on('hashchange', function() {
         MoveToEntry(newEntryid);
     }
 });
-var response;
 function setValues(newEntry){
     currenthash = newEntry;
     document.getElementById("story").innerHTML = response[newEntry].s;
