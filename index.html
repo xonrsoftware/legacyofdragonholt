@@ -22,25 +22,30 @@
 
   <!-- Execution -->
   <script>
-    $(function() {
-    var entryid = window.location.hash.slice(1);
-    if(entryid){
+    $(function () {
+      var entryid = window.location.hash.slice(1);
+      if (entryid) {
         MoveToEntry(entryid);
-    }else setValues("1");
-  });
+      } else setValues("1");
+    });
   </script>
 </head>
 
 <body>
-<div class="container">
-<br><br>
-<div><p id="story">Story text</p></div>
-<br><br>
-</div>
-<footer class="footer">
   <div class="container">
-  <p id="savefield" class="text-muted small"></p>
+    <br>
+    <br>
+    <div>
+      <p id="story">Story text</p>
+    </div>
+    <br>
+    <br>
   </div>
-</footer>
+  <footer class="footer">
+    <div class="container">
+      <p id="savefield" class="text-muted small"></p>
+    </div>
+  </footer>
 </body>
+
 </html>

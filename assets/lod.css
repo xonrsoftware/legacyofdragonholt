@@ -2,20 +2,25 @@ html {
   position: relative;
   min-height: 100%;
 }
-.bkrnd-red{
+
+.bkrnd-red {
   color: #fff;
   background-color: #f00;
   font-style: normal !important;
 }
-.movetext{
+
+.movetext {
   padding-left: 35px;
   font-style: italic;
 }
-.movelink{
+
+.movelink {
   padding-left: 70px;
 }
+
 body {
-  margin-bottom: 60px; /* Margin bottom by footer height */
+  margin-bottom: 60px;
+  /* Margin bottom by footer height */
   font-family: 'Merriweather', serif;
   background-color: #FFF3E0;
   font-size: 1.2rem;
@@ -26,5 +31,6 @@ body {
   position: absolute;
   bottom: 0;
   width: 100%;
-  height: 60px; /* Set the fixed height of the footer here */
+  height: 60px;
+  /* Set the fixed height of the footer here */
 }
