@@ -13,7 +13,7 @@ function MoveToEntry(newEntryid) {
         setValues(newEntryid);
         if (newEntryid != "1") {
             window.location.hash = '#' + newEntryid;
-            document.getElementById("savefield").innerHTML = 'Сохранить текущую страницу: <span class="selecttxt" contenteditable="true">https://phenomen.github.io/legacyofdragonholt/#' + newEntryid + '</span>';
+            document.getElementById("savefield").innerHTML = 'Сохранить текущую страницу: <span class="selecttxt" contenteditable="true">'+window.location.origin+'/legacyofdragonholt/#' + newEntryid + '</span>';
         } else document.getElementById("savefield").innerHTML = "";
     } catch (e) {
         console.log("Error:" + e);
