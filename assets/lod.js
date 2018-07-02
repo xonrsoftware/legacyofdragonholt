@@ -1,8 +1,4 @@
-﻿function selectOption(op) {
-    var newEntry = document.getElementById("option" + op).value
-    MoveToEntry(newEntry);
-}
-$(function () {
+﻿$(function () {
     document.getElementById('savefield').addEventListener('click', function () {
         var range = document.createRange();
         range.selectNodeContents(document.getElementsByClassName("selecttxt")[0]);
@@ -38,8 +34,12 @@ $(window).on('hashchange', function () {
 });
 
 function setValues(newEntry) {
+    if (response[newEntry] == undefined) {
+        window.location.hash = '#' + currenthash;
+        throw "No Data";
+    }
     currenthash = newEntry;
-    if (response[newEntry] == undefined) throw "No Data";
+
     document.getElementById("story").innerHTML = response[newEntry].s;
 
     for (var i = 1; i < 7; i++) {
