@@ -22,6 +22,8 @@
 
   <!-- Execution -->
   <script>
+    baseurl = location.href.replace(/[^/]*$/, '');
+    if (baseurl.substr(-1) != '/') baseurl += '/';
     $(function () {
       var entryid = window.location.hash.slice(1);
       if (entryid) {

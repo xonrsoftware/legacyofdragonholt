@@ -7,13 +7,13 @@
         sel.addRange(range);
     });
 });
-
+var baseurl;
 function MoveToEntry(newEntryid) {
     try {
         setValues(newEntryid);
         if (newEntryid != "1") {
             window.location.hash = '#' + newEntryid;
-            document.getElementById("savefield").innerHTML = 'Сохранить текущую страницу: <span class="selecttxt" contenteditable="true">'+window.location.origin+'/legacyofdragonholt/#' + newEntryid + '</span>';
+            document.getElementById("savefield").innerHTML = 'Сохранить текущую страницу: <span class="selecttxt" contenteditable="true">'+baseurl+'#' + newEntryid + '</span>';
         } else document.getElementById("savefield").innerHTML = "";
     } catch (e) {
         console.log("Error:" + e);
