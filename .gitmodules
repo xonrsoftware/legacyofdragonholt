@@ -1,0 +1,3 @@
+[submodule "submodules/Phenomen/legacyofdragonholt"]
+	path = submodules/Phenomen/legacyofdragonholt
+	url = https://github.com/Phenomen/legacyofdragonholt
