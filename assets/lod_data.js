@@ -1,1 +1,1 @@
-..submodules/Phenomen/legacyofdragonholt/assets/lod_data.js
+../submodules/Phenomen/legacyofdragonholt/assets/lod_data.js
